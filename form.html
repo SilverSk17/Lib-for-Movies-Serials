@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulár</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="placeholder-icon.png">
+</head>
+<body>
+    <div class="container py-4">
+
+        <h1 class="text-center mb-1">Formulár</h1>
+        <p class="text-center mb-3">Prosím, vyplňte nasledujúce polia.</p>
+
+        <div class="d-flex justify-content-center gap-2 mb-4">
+            <a href="index.html"><button class="filter-button">Všetko</button></a>
+            <a href="filmy.html"><button class="filter-button">Filmy</button></a>
+            <a href="serialy.html"><button class="filter-button">Serialy</button></a>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card movie-card p-4">
+
+                    <p style="color: #d4b896; font-size: 1em;">Formulár pre kontaktovanie knižnice:</p>
+                    <p style="color: #d4b896; font-size: 0.9em;">Či už o update databázy filmov a serialov alebo niečo iné.</p>
+
+                    <form id="Formular">
+
+                        <div class="mb-3">
+                            <label for="name" style="color: #f0d9b5; font-weight: bold;">Meno:</label>
+                            <input type="text" id="name" name="name" class="form-control search-bar mt-1" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" style="color: #f0d9b5; font-weight: bold;">Email:</label>
+                            <input type="email" id="email" name="email" class="form-control search-bar mt-1" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" style="color: #f0d9b5; font-weight: bold;">Správa:</label>
+                            <textarea id="message" name="message" rows="4"
+                                      class="form-control search-bar mt-1"
+                                      placeholder="Napíšte správu..."></textarea>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <input type="submit" value="Odoslať" class="filter-button">
+                            <button type="button" id="clearBtn" class="filter-button">Vymazať</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

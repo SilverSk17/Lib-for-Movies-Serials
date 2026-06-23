@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="placeholder-icon.png">
+</head>
+<body>
+    <div class="container py-4">
+
+        <h1 class="text-center mb-1">Filmy</h1>
+        <p class="text-center mb-3">Tu nájdete zoznam dostupných filmov.</p>
+
+        <div class="MainButtons">
+            <div class="d-flex gap-2">
+                <a href="index.html"><button class="filter-button">Všetko</button></a>
+                <a href="filmy.html"><button class="filter-button active-button">Filmy</button></a>
+                <a href="serialy.html"><button class="filter-button">Serialy</button></a>
+            </div>
+            <input type="text" class="form-control search-bar" id="search"
+                   placeholder="Vyhľadáj.." style="max-width: 220px;"
+                   onkeyup="searchItems()">
+        </div>
+
+        <div class="row row-cols-4 g-4" id="grid">
+
+            <div class="col item" data-type="movie">
+                <div class="card h-100 movie-card">
+                    <video class="card-img-top video-holder" controls>
+                        <source src="movies/Bullet Train 2022.mp4" type="video/mp4">
+                    </video>
+                    <div class="card-body">
+                        <span class="badge badge-film">Film</span>
+                        <span class="badge badge-akcny">Akčný</span>
+                        <h5 class="card-title mt-1">Bullet Train</h5>
+                        <p class="card-text">2022</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col item" data-type="movie">
+                <div class="card h-100 movie-card">
+                    <video class="card-img-top video-holder" controls>
+                        <source src="movies/Válka-světů-War-of-the-Worlds-2005.mp4" type="video/mp4">
+                    </video>
+                    <div class="card-body">
+                        <span class="badge badge-film">Film</span>
+                        <span class="badge badge-akcny">Akčný</span>
+                        <h5 class="card-title mt-1">Válka světů</h5>
+                        <p class="card-text">2005</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col item" data-type="movie">
+                <div class="card h-100 movie-card">
+                    <video class="card-img-top video-holder" controls>
+                        <source src="movies/Výbušná Rychlost - Bullet Train Explosion (2025) En-Jp-Cz Dub - En-Jp-Cz Sub.mp4" type="video/mp4">
+                    </video>
+                    <div class="card-body">
+                        <span class="badge badge-film">Film</span>
+                        <span class="badge badge-drama">Drama</span>
+                        <h5 class="card-title mt-1">Výbušná Rychlost</h5>
+                        <p class="card-text">2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col item" data-type="movie">
+                <div class="card h-100 movie-card">
+                    <video class="card-img-top video-holder" controls>
+                        <source src="assets/PLACEHOLDER.mp4" type="video/mp4">
+                    </video>
+                    <div class="card-body">
+                        <span class="badge badge-film">Film</span>
+                        <span class="badge badge-horor">Horor</span>
+                        <h5 class="card-title mt-1">Film</h5>
+                        <p class="card-text">Popis filmu</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="form.html"><button class="filter-button">Formulár</button></a>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
