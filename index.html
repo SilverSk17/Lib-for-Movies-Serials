@@ -1,3 +1,6 @@
+<!-- * This is a simple HTML site for a movie/series library -->
+<!-- * Comments are generally only in index.html. Other HTML files do not have them unless something needs an explanation and is only found on that page. -->
+
 <!DOCTYPE html>
 <html lang="sk">
 <head>
@@ -6,7 +9,7 @@
     <title>Knižnica Filmov/Serialov</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="placeholder-icon.png">
+    <link rel="icon" href="assets/LocalUI.svg">
 </head>
 <body>
     <div class="container py-4">
@@ -16,21 +19,24 @@
 
         <div class="MainButtons">
             <div class="d-flex gap-2">
-                <a href="index.html"><button class="filter-button active-button">Všetko</button></a>
-                <a href="filmy.html"><button class="filter-button">Filmy</button></a>
-                <a href="serialy.html"><button class="filter-button">Serialy</button></a>
+                <a href="index.html"><button class="filter-button active-button">Všetko</button></a>    <!-- * Means "All" --> 
+                <a href="filmy.html"><button class="filter-button">Filmy</button></a>                   <!-- * Means "Movies" -->
+                <a href="serialy.html"><button class="filter-button">Serialy</button></a>               <!-- * Means "Series" -->
             </div>
             <input type="text" class="form-control search-bar" id="search"
                    placeholder="Vyhľadáj.." style="max-width: 220px;"
                    onkeyup="searchItems()">
         </div>
 
-        <div class="row row-cols-4 g-4" id="grid">
-
+        <div class="row row-cols-2 row-cols-md-4 g-4" id="grid">
+            <!-- * Data-Type decides the type of content whenever its movie or serial, data-search contains tags that are hidden on site but still are searchable -->
+            <!-- * Few examples are below, original sources been replaced with placeholder.mp4, you can replace them with your own sources -->
+            <!-- * "tags" or better said "data-search" are originally in Slovak language you can change them to English or other languages -->
+            <!-- * style.css line 95 contains code for badges/tags, you can change them to your own or add new ones -->
             <div class="col item" data-type="movie" data-search="Bullet Train 2022, Brad Pitt, Akčný">
                 <div class="card h-100 movie-card">
                     <video class="card-img-top video-holder" controls>
-                        <source src="movies/Bullet Train 2022.mp4" type="video/mp4">
+                        <source src="assets/PLACEHOLDER.mp4" type="video/mp4">
                     </video>
                     <div class="card-body">
                         <span class="badge badge-film">Film</span>
@@ -44,7 +50,7 @@
             <div class="col item" data-type="movie" data-search="Válka světů,  Tom Cruise, War of the Worlds, Steven Spielberg, 2005">
                 <div class="card h-100 movie-card">
                     <video class="card-img-top video-holder" controls>
-                        <source src="movies/Válka-světů-War-of-the-Worlds-2005.mp4" type="video/mp4">
+                        <source src="assets/PLACEHOLDER.mp4" type="video/mp4">
                     </video>
                     <div class="card-body">
                         <span class="badge badge-film">Film</span>
@@ -58,7 +64,7 @@
             <div class="col item" data-type="movie" data-search="Výbušná Rychlost, Bullet Train Explosion, 2025, English, Japanese, Czech, Dubbed, Subtitled">
                 <div class="card h-100 movie-card">
                     <video class="card-img-top video-holder" controls>
-                        <source src="movies/Výbušná Rychlost - Bullet Train Explosion (2025) En-Jp-Cz Dub - En-Jp-Cz Sub.mp4" type="video/mp4">
+                        <source src="assets/PLACEHOLDER.mp4" type="video/mp4">
                     </video>
                     <div class="card-body">
                         <span class="badge badge-film">Film</span>
@@ -76,6 +82,7 @@
                     </video>
                     <div class="card-body">
                         <span class="badge badge-serial">Seriál</span>
+                        <span class="badge badge-romantika">Romantika</span>
                         <h5 class="card-title mt-1">Seriál</h5>
                         <p class="card-text">Popis serialu</p>
                     </div>
@@ -89,6 +96,7 @@
                     </video>
                     <div class="card-body">
                         <span class="badge badge-film">Film</span>
+                        <span class="badge badge-drama">Drama</span>
                         <h5 class="card-title mt-1">Film</h5>
                         <p class="card-text">Popis filmu</p>
                     </div>
@@ -102,6 +110,8 @@
                     </video>
                     <div class="card-body">
                         <span class="badge badge-serial">Seriál</span>
+                        <span class="badge badge-horor">Horor</span>
+                        <span class="badge badge-drama">Drama</span>
                         <h5 class="card-title mt-1">Seriál</h5>
                         <p class="card-text">Popis serialu</p>
                     </div>
@@ -115,6 +125,7 @@
                     </video>
                     <div class="card-body">
                         <span class="badge badge-film">Film</span>
+                        <span class="badge badge-krimi">Krimi</span>
                         <h5 class="card-title mt-1">Film</h5>
                         <p class="card-text">Popis filmu</p>
                     </div>
@@ -128,6 +139,7 @@
                     </video>
                     <div class="card-body">
                         <span class="badge badge-serial">Seriál</span>
+                        <span class="badge badge-thriller">Thriller</span>
                         <h5 class="card-title mt-1">Seriál</h5>
                         <p class="card-text">Popis serialu</p>
                     </div>

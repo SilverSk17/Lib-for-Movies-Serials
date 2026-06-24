@@ -1,24 +1,22 @@
 function searchItems() {
     var query = document.getElementById('search').value.toLowerCase();
     document.querySelectorAll('.item').forEach(function(item) {
+
+        var badges = item.querySelectorAll('.badge');
+        var badgeText = '';
+        badges.forEach(function(badge) {
+            badgeText += badge.textContent.toLowerCase() + ' ';
+        });
+
         var searchData = item.getAttribute('data-search').toLowerCase();
         var altName = item.getAttribute('data-search') || '';
-        if (searchData.includes(query) || altName.includes(query)) {
+        if (searchData.includes(query) || altName.includes(query) || badgeText.includes(query)) {
             item.style.display = '';
         } else {
             item.style.display = 'none';
         }
     });
 }
-
-const h1 = document.querySelector('h1');
-h1.onclick = function() {
-    if (h1.style.opacity === '0') {
-        h1.style.opacity = '1';
-    } else {
-        h1.style.opacity = '0';
-    }
-};
 
 function showPopup(message) {
     document.getElementById('popMessage').textContent = message;

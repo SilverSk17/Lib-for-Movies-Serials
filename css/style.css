@@ -89,13 +89,16 @@ h1 {
     height: 150px;
 }
 
-.badge-film    { background: #c9a97a; color: #3b2510; }
-.badge-serial  { background: #8fbfad; color: #1a3d30; }
-.badge-genre   { background: #7a8fbf; color: #f0f4ff; }
-.badge-akcny   { background: #bf7a7a; color: #fff0f0; }
-.badge-drama   { background: #7abf8f; color: #f0fff4; }
-.badge-komedia { background: #bfb77a; color: #fffbf0; }
-.badge-horor   { background: #6e6e6e; color: #f5f5f5; }
+.badge-film      { background: #c9a97a; color: #3b2510; }
+.badge-serial    { background: #8fbfad; color: #1a3d30; }
+.badge-genre     { background: #7a8fbf; color: #f0f4ff; }
+.badge-akcny     { background: #bf7a7a; color: #fff0f0; } /* * Akčný means Action */
+.badge-drama     { background: #7abf8f; color: #f0fff4; } /* * Drama means Drama */
+.badge-romantika { background: #bf7abf; color: #fff0ff; } /* * Romantika means Romance */
+.badge-komedia   { background: #bfb77a; color: #fffbf0; } /* * Komedia means Comedy */
+.badge-horor     { background: #6e6e6e; color: #f5f5f5; } /* * Horor means Horror */
+.badge-thriller  { background: #4a4a6a; color: #e0e0ff; } /* * Thriller */
+.badge-krimi     { background: #aa1616; color: #f0f0f0; } /* * Krimi means Crime */   
 
 /* * Serialy Accordion component */
 
